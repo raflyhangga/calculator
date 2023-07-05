@@ -1,21 +1,21 @@
+// Constant
+let prevValue = "";
+let afterValue = "";
+let currentOperation = ""
+
+// Screen DOM
 let prevScreenValue = document.querySelector(".Calculator .first-row .screen .previousValue"); 
 let afterScreenValue = document.querySelector(".Calculator .first-row .screen .afterValue"); 
 
+// Button's DOM
 let numbers = document.querySelectorAll(".Calculator .other-row .number");
-// let currentValue = "";
-let prevValue = "";
-let afterValue = "";
-
 let operators = document.querySelectorAll(".Calculator .other-row .operator");
-let currentOperation = ""
-
 let equal = document.querySelector(".Calculator .other-row .equal");
-
 let clear = document.querySelector(".Calculator .first-row button");
-
 let decimal = document.querySelector(".Calculator .other-row .decimal");
 
 
+// Event Listener
 numbers.forEach((number) => number.addEventListener('click', (e) =>{
     numberHandle(e.target.textContent);
     afterScreenValue.textContent = afterValue;
@@ -53,7 +53,7 @@ decimal.addEventListener('click',() => {
     afterScreenValue.textContent = afterValue;
 })
 
-
+// Function
 function numberHandle(number) {
     afterValue += number;
 }
@@ -64,9 +64,6 @@ function operatorHandle(operator) {
     afterValue = ''
 }
 
-function addDecimal(){
-    return;
-}
 
 function calculate() {
     prevValue = Number(prevValue);
@@ -82,7 +79,11 @@ function calculate() {
         afterValue = prevValue * afterValue;
     }
     else if (currentOperation === "/") {
-        afterValue = prevValue / afterValue;
+        if (afterValue != 0 ) {
+            afterValue = prevValue / afterValue;
+        } else {
+            alert("Really?")
+            afterValue = "";
+        }
     }
-    console.log(afterValue);
 }
