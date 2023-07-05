@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e76f51;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+h1 {
+    color: #ffd60a;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.first-row {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.first-row .screen {
+    background-color: whitesmoke;
+    border: 3px solid #38a3a5;
+    flex: 2;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+}
+
+.first-row .screen .previousValue, .first-row .screen .afterValue {
+    font-size: 1.2rem;
+    margin-right: 4px;
+    height: 16px;
+}
+
+/* .first-row .screen .afterValue {
+    height: 16px;
+} */
+
+
+.other-row {
+    margin: 5px 0;
+    display: flex;
+    gap: 10px
+}
+
+button {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: whitesmoke;
+    height: 4rem;
+    width: 6rem;
+    background-color: #ffc300;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover{
+    /* mix-blend-mode:color; */
+    transform: scale(1.1,1.1);
+}
+
+button.operator {
+    background-color: #ffafcc;
+}
+
+button.equal {
+    background-color: #3a86ff;
+}
+
+/* .Calculator .other-row button.decimal {
+    padding: 20px 37px
+}
+
+.Calculator .other-row button#multiply {
+    padding: 20px 33.5px;
+}
+
+.Calculator .other-row button#add {
+    padding: 20px 33px;
+} */
