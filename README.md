@@ -1,6 +1,6 @@
 # calculator
 
-This is a little ongoing project i started in order to me undertans HTML, CSS, and Vanilla JavaScript better.
+This is a little ongoing project i started in order to me undertand HTML, CSS, and Vanilla JavaScript better.
 
 
 
